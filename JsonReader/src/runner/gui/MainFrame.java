@@ -12,7 +12,10 @@ public class MainFrame extends JFrame {
 	private static final long serialVersionUID = 1L;
 	public MainFrame()
 	{
-		setLayout(new GridLayout(1,1));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(new GridLayout(2,3));
+		setSize(500,500);
+		add(new DisplayPanel());
 	}
 
 }

@@ -2,28 +2,40 @@ package util;
 
 public class Person {
 	
-	private final int id = 0;
-	private final String name = "";
-	private final String number = "";
+//	private final String id = "";
+	private final String fname = "";
+	private final String lname = "";
+	private final String email = "";
+	private final String state = "";
 	
-	public String getName()
+	public String getFName()
 	{
-		return name;
+		return fname;
 	}
 	
-	public String getNum()
+	public String getLName()
 	{
-		return number;
+		return lname;
 	}
 	
-	public int getId()
+	public String getEmail()
 	{
-		return id;
+		return email;
+	}
+	
+//	public String getId()
+//	{
+//		return id;
+//	}
+	
+	public String getState()
+	{
+		return state;
 	}
 	
 	public String toString()
 	{
-		return "Name: " + name + "Number: " + number;
+		return "First Name: " + fname + "Last Name: " + lname;
 	}
 
 }
