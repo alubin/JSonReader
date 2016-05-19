@@ -52,7 +52,7 @@ public class DisplayPanel extends JPanel{
 					String results = new Retrieve().httpGet(address);
 //					gson.fromJson(results, Person.class);
 //					System.out.println(gson.toString());
-					gson.fromJson(json, classOfT)
+//					gson.fromJson(json, classOfT)
 				}
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
