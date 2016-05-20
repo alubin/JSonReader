@@ -21,7 +21,7 @@ public class DisplayPanel extends JPanel{
 	 */
 	private static final long serialVersionUID = 1L;
 	private Gson gson = new Gson();
-	private JTextField addressFld = new JTextField();
+	private JTextField addressFld = new JTextField("http://danwebserver.us-east-1.elasticbeanstalk.com/api/user");
 
 	public DisplayPanel()
 	{
@@ -50,9 +50,8 @@ public class DisplayPanel extends JPanel{
 				if (address != "")
 				{
 					String results = new Retrieve().httpGet(address);
-//					gson.fromJson(results, Person.class);
+					gson.fromJson(gson.toJson(results), Person.class);
 //					System.out.println(gson.toString());
-//					gson.fromJson(json, classOfT)
 				}
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
