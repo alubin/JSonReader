@@ -9,9 +9,13 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
 
 import com.google.gson.Gson;
 
+import util.Parser;
 import util.Person;
 import util.Retrieve;
 
@@ -49,11 +53,19 @@ public class DisplayPanel extends JPanel{
 			try {
 				if (address != "")
 				{
-					String results = new Retrieve().httpGet(address);
-					gson.fromJson(gson.toJson(results), Person.class);
+					new Retrieve();
+//					String results = Retrieve.getXML(address);
+					Parser.parseXml(address);
+//					gson.fromJson(gson.toJson(results), Person.class);
 //					System.out.println(gson.toString());
 				}
 			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (ParserConfigurationException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (SAXException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
